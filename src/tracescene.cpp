@@ -41,7 +41,7 @@ void TraceScene(Primitive *primitives, int numPrimitives, LightSource *lightSour
 	ColorFloat color = TraceRay(-1, primaryRay, primitives, numPrimitives, lightSources, numLightSources, 0);           
 	if(color.r>255) color.r=255;
 	if(color.g>255) color.g=255;
-	if(color.b>255) color.b=255;        
+	if(color.b>255) color.b=255;  
 	printf("%.0f %.0f %.0f ",color.r,color.g,color.b);
 	buffer[ x +  (y*640) ] = ((int)color.r<<16) + ((int)color.g<<8) + (int)color.b;
       }
